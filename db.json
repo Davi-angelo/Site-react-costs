@@ -12,17 +12,6 @@
       "id": 2
     },
     {
-      "name": "teste",
-      "budget": "123",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 4
-    },
-    {
       "name": "teste23",
       "budget": "234",
       "category": {

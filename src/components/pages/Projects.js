@@ -12,7 +12,9 @@ import styles from './Projects.module.css'
 function Projects() {
 
     const [projects, setProjects] = useState([])
-    const[confirmation, setConfirmation] = useState(true)
+    const [confirmation, setConfirmation] = useState(false)
+
+    const [id, setId] = useState()
 
 
     const location = useLocation()
@@ -52,22 +54,21 @@ function Projects() {
     }
 
     useEffect(() => {
-        const confirmation_box = document.getElementById("confirmation")
-
-        if(confirmation) {
-            confirmation_box.style.display = 'block'
-        }
-        else{
-            confirmation_box.style.display = 'none'
-        }
-        
-    });
+        setId(document.getElementById("confirmation"))
+    }, []);
 
 
     function aparecer() {
-        confirmation ? setConfirmation(false) : setConfirmation(true)
+        if (confirmation) {
+            setConfirmation(false)
+            id.style.display = 'none'
+        }
+        else {
+            setConfirmation(true)
+            id.style.display = 'block'
+        }
     }
-    
+
 
     return (
         <div className={styles.project_container}>
@@ -85,6 +86,7 @@ function Projects() {
                             budget={project.budget}
                             category={project.category.name}
                             key={project.id}
+                            confirmation={aparecer}
                             handleRemove={removeProject}
                         />
                     ))}
@@ -93,15 +95,18 @@ function Projects() {
 
             </Container>
             <button onClick={aparecer}>Apareça</button>
-            <div id="confirmation" className={styles.delete_confirmation}>
-                <div className={styles.delete_confirmation_inside}>
-                    <p>Excluir o projeto permanentemente?</p>
-                    <div className={styles.bttns}>
-                        <button>Cancelar</button>
-                        <button>Excluir</button>
+            <div id="confirmation" className={styles.screen_protection} onClick={aparecer} >
+                <div className={styles.delete_confirmation}>
+                    <div className={styles.delete_confirmation_inside}>
+                        <p>Excluir o projeto permanentemente?</p>
+                        <div className={styles.bttns}>
+                            <button>Cancelar</button>
+                            <button id="teste">Excluir</button>
+                        </div>
                     </div>
                 </div>
             </div>
+
         </div>
     )
 }
