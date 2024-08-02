@@ -1,0 +1,91 @@
+.card {
+    margin: 0.5%;
+    border: 1px solid darkgrey;
+    border-radius: 5px;
+    width: 22%;
+    padding: 1em;
+}
+
+.card h4 {
+    background-color: gold;
+    color: black;
+    text-align: center;
+    padding: .4em;
+    font-size: 1.1em;
+    margin-bottom: 1.3em;
+}
+
+.card p {
+    margin-bottom: 1em;
+}
+
+.card p span {
+    font-weight: bold;
+}
+
+.category_text {
+    display: flex;
+    align-items: center;
+}
+
+.category_text span {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: black;
+    margin-right: 5px;
+}
+
+.project_card_actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.2em;
+}
+
+.project_card_actions a,
+.project_card_actions button {
+    text-decoration: none;
+    border: none;
+    background-color: #FFF;
+    color: black;
+    font-size: .9em;
+    padding: .6em 1em;
+    cursor: pointer;
+    border: 1px solid #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+}
+
+.project_card_actions svg {
+    margin-right: .5em;
+}
+
+.project_card_actions a:hover,
+.project_card_actions button:hover {
+    background-color: #222;
+    color: gold;
+}
+
+.category_text .infra {
+    background-color: darkorange;
+}
+
+.category_text .desenvolvimento {
+    background-color: blueviolet;
+}
+
+.category_text .design {
+    background-color: crimson;
+}
+
+.category_text .planejamento {
+    background-color: forestgreen;
+}
+
+.category_text .davi {
+    background-color: navy;
+}
