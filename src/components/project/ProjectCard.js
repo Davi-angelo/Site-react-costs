@@ -4,7 +4,7 @@ import styles from './ProjectCard.module.css'
 
 import { BsPencil, BsFillTrashFill } from 'react-icons/bs'
 
-function ProjectCard({ id, name, budget, category, confirmation, handleRemove }) {
+function ProjectCard({ id, name, budget, category, trigger, handleConfirmation, handleRemove }) {
 
     const remove = (e) => {
         e.preventDefault()
@@ -21,10 +21,10 @@ function ProjectCard({ id, name, budget, category, confirmation, handleRemove })
                 <span className={`${styles[category.toLowerCase()]}`}></span> {category}
             </p>
             <div className={styles.project_card_actions}>
-                <Link to="/">
+                <Link to={`/project/${id}`}>
                     <BsPencil /> Editar
                 </Link>
-                <button onClick={confirmation}>
+                <button onClick={remove}>
                     <BsFillTrashFill /> Excluir
                 </button>
             </div>

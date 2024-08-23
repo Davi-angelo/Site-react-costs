@@ -12,50 +12,6 @@
       "id": 2
     },
     {
-      "name": "teste23",
-      "budget": "234",
-      "category": {
-        "id": "5",
-        "name": "Davi"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 5
-    },
-    {
-      "name": "teste de mensagem",
-      "budget": "30000",
-      "category": {
-        "id": "3",
-        "name": "Design"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 6
-    },
-    {
-      "name": "fiwoejaoef",
-      "budget": "42343",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 7
-    },
-    {
-      "name": "hoifes",
-      "budget": "66666",
-      "category": {
-        "id": "4",
-        "name": "Planejamento"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 8
-    },
-    {
       "name": "teste de layout",
       "budget": "35000",
       "category": {
@@ -67,14 +23,39 @@
       "id": 9
     },
     {
-      "name": "teste 2",
-      "budget": "432423",
+      "name": "teste de edição",
+      "budget": "12000",
       "category": {
-        "id": "1",
-        "name": "Infra"
+        "id": "2",
+        "name": "Desenvolvimento"
       },
-      "cost": 0,
-      "services": [],
+      "cost": 3890,
+      "services": [
+        {
+          "name": "sefsefesfesf",
+          "cost": "42",
+          "description": "sefesfsefesf",
+          "id": "2bf98d62-e02a-402b-921d-c0137ec86daa"
+        },
+        {
+          "name": "Contrato de empresa",
+          "cost": "2000",
+          "description": "Contratar empresa para o correto desenvolvimento do projeto",
+          "id": "9c4898ca-fe47-43e5-bcbf-ba65392aa722"
+        },
+        {
+          "name": "teste de servico",
+          "cost": "1725",
+          "description": "sei la teste",
+          "id": "642b179e-2384-4529-bd43-f19c68babbf0"
+        },
+        {
+          "name": "teste123",
+          "cost": "123",
+          "description": "123456",
+          "id": "758e93fa-9782-4e8e-8511-08a25356cabe"
+        }
+      ],
       "id": 10
     }
   ],

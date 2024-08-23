@@ -13,9 +13,9 @@ function Projects() {
 
     const [projects, setProjects] = useState([])
     const [confirmation, setConfirmation] = useState(false)
+    const [projectMessage, setProjectMessage] = useState('')
 
     const [id, setId] = useState()
-
 
     const location = useLocation()
     let message = ''
@@ -46,27 +46,23 @@ function Projects() {
             },
         })
             .then((resp) => resp.json())
-            .then((data) => {
+            .then(() => {
                 setProjects(projects.filter((project) => project.id !== id))
-
+                setProjectMessage("Projeto removido com sucesso!")
             })
             .catch((err) => console.log(err))
     }
+
 
     useEffect(() => {
         setId(document.getElementById("confirmation"))
     }, []);
 
 
-    function aparecer() {
-        if (confirmation) {
-            setConfirmation(false)
-            id.style.display = 'none'
-        }
-        else {
-            setConfirmation(true)
-            id.style.display = 'block'
-        }
+    function removeScreenSwitch() {
+        confirmation ? id.style.display = 'none' : id.style.display = 'block'
+
+        setConfirmation(!confirmation)
     }
 
 
@@ -77,6 +73,7 @@ function Projects() {
                 <LinkButton to="/newproject" text="Criar Projeto" />
             </div>
             {message && <Message type="success" msg={message} />}
+            {projectMessage && <Message type="success" msg={projectMessage} />}
             <Container customClass="start">
                 {projects.length > 0 &&
                     projects.map((project) => (
@@ -86,7 +83,7 @@ function Projects() {
                             budget={project.budget}
                             category={project.category.name}
                             key={project.id}
-                            confirmation={aparecer}
+                            handleConfirmation={removeScreenSwitch}
                             handleRemove={removeProject}
                         />
                     ))}
@@ -94,14 +91,14 @@ function Projects() {
                 {projects.length === 0 && <p>Não há projetos cadastrados!</p>}
 
             </Container>
-            <button onClick={aparecer}>Apareça</button>
-            <div id="confirmation" className={styles.screen_protection} onClick={aparecer} >
+            <button onClick={removeScreenSwitch}>Apareça</button>
+            <div id="confirmation" className={styles.screen_protection}>
                 <div className={styles.delete_confirmation}>
                     <div className={styles.delete_confirmation_inside}>
                         <p>Excluir o projeto permanentemente?</p>
                         <div className={styles.bttns}>
-                            <button>Cancelar</button>
-                            <button id="teste">Excluir</button>
+                            <button onClick={removeScreenSwitch}>Cancelar</button>
+                            <button onClick={removeScreenSwitch}>Excluir</button>
                         </div>
                     </div>
                 </div>

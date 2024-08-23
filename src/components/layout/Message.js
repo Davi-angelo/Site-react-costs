@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 
 
 import styles from './Message.module.css'
-import { SiInteractiondesignfoundation } from 'react-icons/si';
 
 function Message({ type, msg }) {
 
@@ -18,7 +17,7 @@ function Message({ type, msg }) {
 
         const timer = setTimeout(() => {
             setVisible(false)
-        }, 10000)
+        }, 5000)
 
         return () => clearTimeout(timer)
     }, [msg]);
@@ -29,7 +28,9 @@ function Message({ type, msg }) {
                 <div
                     className={`${styles.message} ${styles[type]}`}
                     onClick={() => { setVisible(false) }}
-                >{msg}</div>
+                >
+                    {msg}
+                </div>
             )}
 
         </>
