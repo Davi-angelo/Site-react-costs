@@ -1,29 +1,7 @@
 {
   "projects": [
     {
-      "name": "fesfgrgf",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "budget": "78",
-      "cost": 0,
-      "services": [],
-      "id": 2
-    },
-    {
-      "name": "teste de layout",
-      "budget": "35000",
-      "category": {
-        "id": "3",
-        "name": "Design"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 9
-    },
-    {
-      "name": "teste de edição",
+      "name": "Programação do site",
       "budget": "12000",
       "category": {
         "id": "2",
@@ -57,6 +35,41 @@
         }
       ],
       "id": 10
+    },
+    {
+      "name": "Orçamento",
+      "budget": "15000",
+      "category": {
+        "id": "4",
+        "name": "Planejamento"
+      },
+      "cost": 9500,
+      "services": [
+        {
+          "name": "Salários",
+          "cost": "5000",
+          "description": "Salários dos responsáveis pelo projeto",
+          "id": "83293559-2f55-45b6-9ad2-97e1767571ea"
+        },
+        {
+          "name": "Taxas",
+          "cost": "4500",
+          "description": "Pagamentos das taxas dos documentos necessários para o projeto",
+          "id": "d009eef9-0774-46bc-b0f2-59979c905a0a"
+        }
+      ],
+      "id": 11
+    },
+    {
+      "category": {
+        "id": "3",
+        "name": "Design"
+      },
+      "name": "Definição do Layout",
+      "budget": "5400",
+      "cost": 0,
+      "services": [],
+      "id": 12
     }
   ],
   "categories": [
